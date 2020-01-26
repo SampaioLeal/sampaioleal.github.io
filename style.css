@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway|Poppins&display=swap");
 * {
   margin: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -10,6 +13,11 @@
   align-items: center;
   width: 100%;
   height: 10vh;
+  font-family: "Raleway";
+}
+.navbar a {
+  color: black;
+  text-decoration: none;
 }
 
 .section {
@@ -43,6 +51,14 @@
 
 .perfil h1 {
   font-family: "Montserrat";
+}
+
+.perfil h3 {
+  font-family: "Poppins";
+}
+
+.perfil p {
+  font-family: "Raleway";
 }
 
 .perfil .imagem {
