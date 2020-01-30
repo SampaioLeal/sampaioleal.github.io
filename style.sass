@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway|Poppins&display=swap")
+@import "./scss/brands.scss"
+*
+  margin: 0
+
+body
+  height: 100vh
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  background: rgb(15,72,92)
+  background: linear-gradient(48deg, rgba(15,72,92,1) 0%, rgba(9,83,121,1) 38%, rgba(0,212,255,1) 100%)
+
+.perfil
+  width: 100%
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  color: white
+  .pic
+    background-image: url("/samp.jpeg")
+    width: 300px
+    height: 300px
+    border-radius: 50%
+    background-size: cover
+    box-shadow: 3px 3px 6px 0 #00000044
+  h1
+    font-family: "Poppins"
+  h3
+    font-family: "Montserrat"
+  p
+    margin-top: 10px
+    font-family: "Raleway"
+
+.social
+  margin-top: 20px
+  font-size: 25px
+  .btn
+    background: white
+    border-radius: 20px
+    padding: 7px 25px
+    box-shadow: 2px 2px 6px 0 #00000044
+    cursor: pointer
+    text-decoration: none
+    color: #0a5377
+    transition: 0.3s
+
+    &:hover
+      transform: translateY(-2px)
+      box-shadow: 3px 3px 15px 0 #00000044
+    &:focus
+      transform: translateY(2px)
+      box-shadow: none
+
+.whats
+  @extend .fab
+
+  &:before
+    content: fa-content($fa-var-whatsapp)
+
+.insta
+  @extend .fab
+
+  &:before
+    content: fa-content($fa-var-instagram)
+.linkedin
+  @extend .fab
+
+  &:before
+    content: fa-content($fa-var-linkedin)
+.github
+  @extend .fab
+
+  &:before
+    content: fa-content($fa-var-github)

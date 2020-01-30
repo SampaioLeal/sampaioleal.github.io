@@ -1,71 +1,129 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway|Poppins&display=swap");
+/*!
+ * Font Awesome Free 5.12.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("../webfonts/fa-brands-400.eot");
+  src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+.fab, .whats, .insta, .linkedin, .github {
+  font-family: 'Font Awesome 5 Brands';
+}
+
 * {
   margin: 0;
 }
-html {
-  scroll-behavior: smooth;
-}
 
-.navbar {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 10vh;
-  font-family: "Raleway";
-}
-.navbar a {
-  color: black;
-  text-decoration: none;
-}
-
-.section {
+body {
   height: 100vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #0f485c;
+  background: linear-gradient(48deg, #0f485c 0%, #095379 38%, #00d4ff 100%);
 }
 
 .perfil {
-  background: rgb(255, 255, 255);
-  background: -moz-linear-gradient(
-    42deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(226, 226, 226, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    42deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(226, 226, 226, 1) 100%
-  );
-  background: linear-gradient(
-    42deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(226, 226, 226, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e2e2e2",GradientType=1);
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.perfil .pic {
+  background-image: url("/samp.jpeg");
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-size: cover;
+  -webkit-box-shadow: 3px 3px 6px 0 #00000044;
+          box-shadow: 3px 3px 6px 0 #00000044;
 }
 
 .perfil h1 {
-  font-family: "Montserrat";
-}
-
-.perfil h3 {
   font-family: "Poppins";
 }
 
+.perfil h3 {
+  font-family: "Montserrat";
+}
+
 .perfil p {
+  margin-top: 10px;
   font-family: "Raleway";
 }
 
-.perfil .imagem {
-  height: 200px;
-  width: 200px;
-  background: url("samp.jpeg");
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
+.social {
+  margin-top: 20px;
+  font-size: 25px;
 }
+
+.social .btn {
+  background: white;
+  border-radius: 20px;
+  padding: 7px 25px;
+  -webkit-box-shadow: 2px 2px 6px 0 #00000044;
+          box-shadow: 2px 2px 6px 0 #00000044;
+  cursor: pointer;
+  text-decoration: none;
+  color: #0a5377;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.social .btn:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 3px 3px 15px 0 #00000044;
+          box-shadow: 3px 3px 15px 0 #00000044;
+}
+
+.social .btn:focus {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.whats:before {
+  content: "\f232";
+}
+
+.insta:before {
+  content: "\f16d";
+}
+
+.linkedin:before {
+  content: "\f08c";
+}
+
+.github:before {
+  content: "\f09b";
+}
+/*# sourceMappingURL=style.css.map */
