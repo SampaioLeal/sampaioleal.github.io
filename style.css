@@ -35,6 +35,7 @@ body {
           align-items: center;
   background: #0f485c;
   background: linear-gradient(48deg, #0f485c 0%, #095379 38%, #00d4ff 100%);
+  overflow-x: hidden;
 }
 
 .perfil {
@@ -77,6 +78,8 @@ body {
 .perfil p {
   margin-top: 10px;
   font-family: "Raleway";
+  width: 90%;
+  text-align: center;
 }
 
 .social {
