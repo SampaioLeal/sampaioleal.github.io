@@ -36,6 +36,33 @@ body {
   background: #0f485c;
   background: linear-gradient(48deg, #0f485c 0%, #095379 38%, #00d4ff 100%);
   overflow-x: hidden;
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .perfil {
@@ -63,8 +90,15 @@ body {
   height: 300px;
   border-radius: 50%;
   background-size: cover;
-  -webkit-box-shadow: 3px 3px 6px 0 #00000044;
-          box-shadow: 3px 3px 6px 0 #00000044;
+  -webkit-box-shadow: 3px 3px 0px 10px #00000044;
+          box-shadow: 3px 3px 0px 10px #00000044;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.perfil .pic:hover {
+  -webkit-box-shadow: 3px 3px 17px 10px #00000044;
+          box-shadow: 3px 3px 17px 10px #00000044;
 }
 
 .perfil h1 {
@@ -101,15 +135,11 @@ body {
 }
 
 .social .btn:hover {
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
   -webkit-box-shadow: 3px 3px 15px 0 #00000044;
           box-shadow: 3px 3px 15px 0 #00000044;
 }
 
 .social .btn:focus {
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -128,5 +158,12 @@ body {
 
 .github:before {
   content: "\f09b";
+}
+
+#particles-js {
+  position: absolute;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -10;
 }
 /*# sourceMappingURL=style.css.map */

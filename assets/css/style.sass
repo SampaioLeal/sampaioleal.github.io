@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway|Poppins&display=swap")
-@import "./scss/brands.scss"
+@import "../scss/brands.scss"
+
 *
   margin: 0
 
@@ -12,6 +13,19 @@ body
   background: rgb(15,72,92)
   background: linear-gradient(48deg, rgba(15,72,92,1) 0%, rgba(9,83,121,1) 38%, rgba(0,212,255,1) 100%)
   overflow-x: hidden
+
+  background-size: 400% 400%
+  animation: gradient 15s ease infinite
+
+@keyframes gradient
+  0%
+    background-position: 0% 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+    background-position: 0% 50%
 
 .perfil
   width: 100%
@@ -27,7 +41,12 @@ body
     height: 300px
     border-radius: 50%
     background-size: cover
-    box-shadow: 3px 3px 6px 0 #00000044
+    box-shadow: 3px 3px 0px 10px #00000044
+    transition: 0.4s
+
+    &:hover
+      box-shadow: 3px 3px 17px 10px #00000044
+
   h1
     font-family: "Poppins"
   h3
@@ -52,10 +71,8 @@ body
     transition: 0.3s
 
     &:hover
-      transform: translateY(-2px)
       box-shadow: 3px 3px 15px 0 #00000044
     &:focus
-      transform: translateY(2px)
       box-shadow: none
 
 .whats
@@ -63,7 +80,6 @@ body
 
   &:before
     content: fa-content($fa-var-whatsapp)
-
 .insta
   @extend .fab
 
@@ -80,4 +96,8 @@ body
   &:before
     content: fa-content($fa-var-github)
 
-  
+#particles-js
+  position: absolute
+  width: 100vw!important
+  height: 100vh!important
+  z-index: -10
