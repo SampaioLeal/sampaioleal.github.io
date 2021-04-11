@@ -9,9 +9,22 @@ import {
   ProjectContainer,
   ProjectButton,
   ContactSection,
+  ProjectCard,
 } from "../styles/Index";
 import Typed from "react-typed";
-import { Container, Grid } from "@material-ui/core";
+import {
+  Button,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Container,
+  Grid,
+  Typography,
+} from "@material-ui/core";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 export default function Home() {
   return (
@@ -63,8 +76,8 @@ export default function Home() {
               <Image
                 src="/samp.jpeg"
                 alt="Programador lindo"
-                width={460}
-                height={460}
+                width={380}
+                height={380}
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -84,10 +97,11 @@ export default function Home() {
               <SkillsContainer>
                 <img src="/icons/ts.png" alt="Typescript Logo" />
                 <img src="/icons/js.png" alt="Javascript Logo" />
-                <img src="/icons/node.png" alt="Javascript Logo" />
-                <img src="/icons/react.png" alt="Javascript Logo" />
-                <img src="/icons/html.png" alt="Javascript Logo" />
-                <img src="/icons/css.png" alt="Javascript Logo" />
+                <img src="/icons/node.png" alt="NodeJS Logo" />
+                <img src="/icons/react.png" alt="ReactJS Logo" width="25px" />
+                <img src="/icons/mobx.png" alt="MobX Logo" width="25px" />
+                <img src="/icons/html.png" alt="HTML Logo" />
+                <img src="/icons/css.png" alt="CSS Logo" />
               </SkillsContainer>
             </Grid>
           </Grid>
@@ -99,40 +113,83 @@ export default function Home() {
           <Grid item xs={12}>
             <SectionTitle>Projetos</SectionTitle>
           </Grid>
+
           <Grid item xs={12} sm={6} md={4}>
-            <ProjectContainer>
-              <b>Aquabit Web</b>
-              <p>
-                Plataforma de inteligência para a produção de peixes e camarão.
-              </p>
-              <ProjectButton href="https://aquabit.com.br">
-                Ir para o site
-              </ProjectButton>
-            </ProjectContainer>
+            <ProjectCard style={{ maxWidth: 345 }}>
+              <CardActionArea>
+                <CardMedia
+                  style={{ height: 140 }}
+                  image="/aquabit-web.png"
+                  title="Aquabit Web"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Aquabit Web
+                  </Typography>
+                  <Typography variant="body2" component="p" color="inherit">
+                    Plataforma de inteligência para a produção de peixes e
+                    camarão.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <ProjectButton href="https://aquabit.com.br">
+                  Ir para o site
+                </ProjectButton>
+              </CardActions>
+            </ProjectCard>
           </Grid>
+
           <Grid item xs={12} sm={6} md={4}>
-            <ProjectContainer>
-              <b>material-ui-numeric-input</b>
-              <p>
-                Input numérico para utilizar com o framework Material-UI para
-                ReactJS
-              </p>
-              <ProjectButton href="https://github.com/SampaioLeal/material-ui-numeric-input">
-                Ir para o repo
-              </ProjectButton>
-            </ProjectContainer>
+            <ProjectCard style={{ maxWidth: 345 }}>
+              <CardActionArea>
+                <CardMedia
+                  style={{ height: 140 }}
+                  image="/todo.png"
+                  title="Aquabit Web"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    TODO List
+                  </Typography>
+                  <Typography variant="body2" component="p" color="inherit">
+                    Projeto educativo com o intuito de ensinar React a conceitos
+                    de gerenciamento de estado
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <ProjectButton href="https://todolist-lyart.vercel.app">
+                  Experimentar
+                </ProjectButton>
+              </CardActions>
+            </ProjectCard>
           </Grid>
+
           <Grid item xs={12} sm={6} md={4}>
-            <ProjectContainer>
-              <b>TODO List</b>
-              <p>
-                Projeto educativo com o intuito de ensinar React a conceitos de
-                gerenciamento de estado.
-              </p>
-              <ProjectButton href="https://todolist-lyart.vercel.app">
-                Experimentar
-              </ProjectButton>
-            </ProjectContainer>
+            <ProjectCard style={{ maxWidth: 345 }}>
+              <CardActionArea>
+                <CardMedia
+                  style={{ height: 140 }}
+                  image="/numeric-input.png"
+                  title="Aquabit Web"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    material-ui-numeric-input
+                  </Typography>
+                  <Typography variant="body2" component="p" color="inherit">
+                    Input numérico para utilizar com o framework Material-UI
+                    para ReactJS
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <ProjectButton href="https://github.com/SampaioLeal/material-ui-numeric-input">
+                  Ir para o repo
+                </ProjectButton>
+              </CardActions>
+            </ProjectCard>
           </Grid>
         </Grid>
       </Container>
@@ -146,13 +203,22 @@ export default function Home() {
                 Você pode entrar em contato comigo a partir das redes sociais
                 abaixo
               </p>
-              <ProjectButton href="https://www.linkedin.com/in/sampaio-leal">
+              <ProjectButton
+                startIcon={<LinkedInIcon />}
+                href="https://www.linkedin.com/in/sampaio-leal"
+              >
                 LinkedIn
               </ProjectButton>
-              <ProjectButton href="https://github.com/SampaioLeal">
+              <ProjectButton
+                startIcon={<GitHubIcon />}
+                href="https://github.com/SampaioLeal"
+              >
                 GitHub
               </ProjectButton>
-              <ProjectButton href="https://github.com/SampaioLeal">
+              <ProjectButton
+                startIcon={<InstagramIcon />}
+                href="https://github.com/SampaioLeal"
+              >
                 Instagram
               </ProjectButton>
             </ContactSection>

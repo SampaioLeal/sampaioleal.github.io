@@ -1,4 +1,4 @@
-import { Button } from "@material-ui/core";
+import { Button, Card } from "@material-ui/core";
 import styled from "styled-components";
 
 export const MainContent = styled.main`
@@ -66,8 +66,8 @@ export const SkillsContainer = styled.div`
   display: flex;
 
   img {
-    border-radius: 0;
-    margin-right: 6px;
+    border-radius: 0 !important;
+    margin: 0 3px;
   }
 `;
 
@@ -94,22 +94,23 @@ export const ProjectContainer = styled.div`
   }
 `;
 
+export const ProjectCard = styled(Card).attrs({})`
+  max-width: 345px;
+  background-color: #445968;
+  color: white;
+`;
+
 export const ProjectButton = styled(Button).attrs({
   variant: "contained",
 })`
-  background: #00a7dc !important;
-  color: white !important;
+  background: #00a7dc;
+  color: white;
 
-  font-weight: bold !important;
-  text-transform: none !important;
-  margin: 0 10px !important;
-`;
+  font-weight: bold;
+  text-transform: none;
+  margin: 0 10px;
 
-export const Footer = styled.footer`
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  &:hover {
+    background: #0392bf;
+  }
 `;
