@@ -33,10 +33,21 @@ export const AboutSection = styled.section`
   p {
     line-height: 1.4em;
     margin: 10px 0;
+    font-size: 18px;
   }
 
   img {
     border-radius: 10px;
+  }
+`;
+
+export const ContactSection = styled.section`
+  color: white;
+
+  p {
+    line-height: 1.4em;
+    margin: 10px 0;
+    font-size: 18px;
   }
 `;
 
@@ -72,9 +83,14 @@ export const ProjectContainer = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 10px;
 
+  b {
+    font-size: 18px;
+  }
+
   p {
     text-align: center;
     margin: 10px 0;
+    font-size: 16px;
   }
 `;
 
@@ -86,6 +102,7 @@ export const ProjectButton = styled(Button).attrs({
 
   font-weight: bold !important;
   text-transform: none !important;
+  margin: 0 10px !important;
 `;
 
 export const Footer = styled.footer`

@@ -8,15 +8,16 @@ import {
   SkillsContainer,
   ProjectContainer,
   ProjectButton,
+  ContactSection,
 } from "../styles/Index";
 import Typed from "react-typed";
-import { Button, Container, Grid } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Antonio Sampaio - Portfólio</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -47,7 +48,7 @@ export default function Home() {
           </MainGreetings>
 
           <Image
-            src="/main-presentation.png"
+            src="/main-presentation.svg"
             alt="Desenvolvedor programando"
             width={500}
             height={500}
@@ -69,17 +70,16 @@ export default function Home() {
             <Grid item xs={12} md={6}>
               <SectionTitle>Sobre mim</SectionTitle>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum pretium efficitur arcu, ac efficitur dui tincidunt
-                sit amet. Nam felis quam, semper eu neque vel, ornare bibendum
-                nibh. Aenean ut dictum ante, consectetur maximus enim. Etiam
-                ullamcorper urna massa, vel ornare metus maximus eu. Curabitur
-                aliquam in ipsum eget lobortis. Nulla nec aliquam ante, sed
-                posuere sem. Sed faucibus venenatis tristique. Cras non nunc
-                ornare, sagittis quam sed, molestie erat. Nulla risus ex,
-                maximus a ligula non, consectetur feugiat ex. Donec faucibus
-                egestas ante ut sagittis. Praesent molestie accumsan enim, eu
-                eleifend ante gravida sit amet. Morbi dignissim sagittis nisi.
+                <li>18 anos</li>
+                <li>Morando em Teresina-PI</li>
+                Descobrindo a tecnologia desde os 14, fui introduzido ao
+                desenvolvimento Web e, desde então, meu foco é dominar as
+                tecnologias Node.JS e React/React Native, utilizando TypeScript
+                para um melhor ambiente de desenvolvimento e trabalho em equipe.
+                <br />
+                Minha maior experiência é o desenvolvimento de plataformas e
+                interfaces de aplicações, unindo design e interatividade a uma
+                melhor experiência de usuário.
               </p>
               <SkillsContainer>
                 <img src="/icons/ts.png" alt="Typescript Logo" />
@@ -105,7 +105,9 @@ export default function Home() {
               <p>
                 Plataforma de inteligência para a produção de peixes e camarão.
               </p>
-              <ProjectButton>Ir para o site</ProjectButton>
+              <ProjectButton href="https://aquabit.com.br">
+                Ir para o site
+              </ProjectButton>
             </ProjectContainer>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
@@ -115,7 +117,9 @@ export default function Home() {
                 Input numérico para utilizar com o framework Material-UI para
                 ReactJS
               </p>
-              <ProjectButton>Ir para o repo</ProjectButton>
+              <ProjectButton href="https://github.com/SampaioLeal/material-ui-numeric-input">
+                Ir para o repo
+              </ProjectButton>
             </ProjectContainer>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
@@ -125,12 +129,46 @@ export default function Home() {
                 Projeto educativo com o intuito de ensinar React a conceitos de
                 gerenciamento de estado.
               </p>
-              <ProjectButton>Experimentar</ProjectButton>
+              <ProjectButton href="https://todolist-lyart.vercel.app">
+                Experimentar
+              </ProjectButton>
             </ProjectContainer>
           </Grid>
         </Grid>
+      </Container>
 
-        <Grid container spacing={3}></Grid>
+      <Container style={{ marginTop: 50 }}>
+        <Grid container spacing={3} alignItems="center">
+          <Grid item xs={12} sm={12} md={6}>
+            <ContactSection>
+              <SectionTitle>Contato</SectionTitle>
+              <p>
+                Você pode entrar em contato comigo a partir das redes sociais
+                abaixo
+              </p>
+              <ProjectButton href="https://www.linkedin.com/in/sampaio-leal">
+                LinkedIn
+              </ProjectButton>
+              <ProjectButton href="https://github.com/SampaioLeal">
+                GitHub
+              </ProjectButton>
+              <ProjectButton href="https://github.com/SampaioLeal">
+                Instagram
+              </ProjectButton>
+            </ContactSection>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={6}
+            style={{ display: "flex" }}
+            justify="center"
+          >
+            <Image src="/contact.svg" width={311} height={330} />
+          </Grid>
+        </Grid>
       </Container>
     </>
   );
