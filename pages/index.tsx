@@ -262,7 +262,8 @@ export default function Home({ helloMessage }) {
         <Container maxWidth="md">
           <Toolbar>
             <Typography variant="body1" color="inherit">
-              Desenvolvido com 💙 utilizando NextJS e Material-UI
+              Desenvolvido com 💙 utilizando NextJS e Material-UI por Sampaio
+              Leal
             </Typography>
           </Toolbar>
         </Container>
