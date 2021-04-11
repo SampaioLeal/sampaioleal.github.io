@@ -1,4 +1,4 @@
-import { Button, Card } from "@material-ui/core";
+import { AppBar, Button, Card } from "@material-ui/core";
 import styled from "styled-components";
 
 export const MainContent = styled.main`
@@ -33,6 +33,10 @@ export const AboutSection = styled.section`
   p {
     line-height: 1.4em;
     margin: 10px 0;
+    font-size: 18px;
+  }
+
+  li {
     font-size: 18px;
   }
 
@@ -71,29 +75,6 @@ export const SkillsContainer = styled.div`
   }
 `;
 
-export const ProjectContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background-color: #445968;
-  color: white;
-
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 10px;
-
-  b {
-    font-size: 18px;
-  }
-
-  p {
-    text-align: center;
-    margin: 10px 0;
-    font-size: 16px;
-  }
-`;
-
 export const ProjectCard = styled(Card).attrs({})`
   max-width: 345px;
   background-color: #445968;
@@ -113,4 +94,10 @@ export const ProjectButton = styled(Button).attrs({
   &:hover {
     background: #0392bf;
   }
+`;
+
+export const Footer = styled(AppBar).attrs({
+  position: "static",
+})`
+  background-color: #22373e;
 `;

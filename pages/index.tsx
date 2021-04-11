@@ -6,13 +6,14 @@ import {
   AboutSection,
   SectionTitle,
   SkillsContainer,
-  ProjectContainer,
   ProjectButton,
   ContactSection,
   ProjectCard,
+  Footer,
 } from "../styles/Index";
 import Typed from "react-typed";
 import {
+  AppBar,
   Button,
   CardActionArea,
   CardActions,
@@ -20,13 +21,14 @@ import {
   CardMedia,
   Container,
   Grid,
+  Toolbar,
   Typography,
 } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
-export default function Home() {
+export default function Home({ helloMessage }) {
   return (
     <>
       <Head>
@@ -42,7 +44,7 @@ export default function Home() {
       <Container>
         <MainContent>
           <MainGreetings>
-            <p>Olá, bom dia!</p>
+            <p>Olá, {helloMessage}</p>
             <h2>Me chamo Antonio Sampaio.</h2>
             <p>
               <Typed
@@ -82,9 +84,9 @@ export default function Home() {
             </Grid>
             <Grid item xs={12} md={6}>
               <SectionTitle>Sobre mim</SectionTitle>
+              <li>18 anos</li>
+              <li>Morando em Teresina-PI</li>
               <p>
-                <li>18 anos</li>
-                <li>Morando em Teresina-PI</li>
                 Descobrindo a tecnologia desde os 14, fui introduzido ao
                 desenvolvimento Web e, desde então, meu foco é dominar as
                 tecnologias Node.JS e React/React Native, utilizando TypeScript
@@ -194,7 +196,7 @@ export default function Home() {
         </Grid>
       </Container>
 
-      <Container style={{ marginTop: 50 }}>
+      <Container style={{ margin: "50px 0" }}>
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} sm={12} md={6}>
             <ContactSection>
@@ -229,13 +231,41 @@ export default function Home() {
             xs={12}
             sm={12}
             md={6}
-            style={{ display: "flex" }}
-            justify="center"
+            style={{ display: "flex", justifyContent: "center" }}
           >
             <Image src="/contact.svg" width={311} height={330} />
           </Grid>
         </Grid>
       </Container>
+
+      <Footer>
+        <Container maxWidth="md">
+          <Toolbar>
+            <Typography variant="body1" color="inherit">
+              Desenvolvido com 💙 utilizando NextJS e Material-UI
+            </Typography>
+          </Toolbar>
+        </Container>
+      </Footer>
     </>
   );
+}
+
+export function getStaticProps(context) {
+  const now = new Date();
+  const hour = now.getHours();
+  let helloMessage = "bom dia!";
+
+  if (hour > 12 && hour < 18) {
+    helloMessage = "boa tarde!";
+  }
+  if (hour > 18) {
+    helloMessage = "boa noite!";
+  }
+
+  return {
+    props: {
+      helloMessage,
+    }, // will be passed to the page component as props
+  };
 }
