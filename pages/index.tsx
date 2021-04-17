@@ -28,7 +28,18 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
-export default function Home({ helloMessage }) {
+export default function Home() {
+  const now = new Date();
+  const hour = now.getHours();
+  let helloMessage = "bom dia!";
+
+  if (hour > 12 && hour < 18) {
+    helloMessage = "boa tarde!";
+  }
+  if (hour > 18) {
+    helloMessage = "boa noite!";
+  }
+
   return (
     <>
       <Head>
@@ -270,23 +281,4 @@ export default function Home({ helloMessage }) {
       </Footer>
     </>
   );
-}
-
-export function getStaticProps(context) {
-  const now = new Date();
-  const hour = now.getHours();
-  let helloMessage = "bom dia!";
-
-  if (hour > 12 && hour < 18) {
-    helloMessage = "boa tarde!";
-  }
-  if (hour > 18) {
-    helloMessage = "boa noite!";
-  }
-
-  return {
-    props: {
-      helloMessage,
-    }, // will be passed to the page component as props
-  };
 }
