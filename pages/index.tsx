@@ -227,7 +227,7 @@ export default function Home() {
         </Grid>
       </Container>
 
-      <Container style={{ margin: "50px 0" }}>
+      <Container style={{ marginTop: 50 }}>
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} sm={12} md={6}>
             <ContactSection>
