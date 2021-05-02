@@ -179,7 +179,7 @@ export default function Home() {
                 <CardMedia
                   style={{ height: 140 }}
                   image="/todo.png"
-                  title="Aquabit Web"
+                  title="TODO List"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -205,7 +205,7 @@ export default function Home() {
                 <CardMedia
                   style={{ height: 140 }}
                   image="/numeric-input.png"
-                  title="Aquabit Web"
+                  title="Material-UI Numeric Input"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -220,6 +220,31 @@ export default function Home() {
               <CardActions>
                 <ProjectButton href="https://github.com/SampaioLeal/material-ui-numeric-input">
                   Ir para o repo
+                </ProjectButton>
+              </CardActions>
+            </ProjectCard>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={4}>
+            <ProjectCard style={{ maxWidth: 345 }}>
+              <CardActionArea>
+                <CardMedia
+                  style={{ height: 140 }}
+                  image="/meucep.png"
+                  title="MeuCEP"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    MeuCEP
+                  </Typography>
+                  <Typography variant="body2" component="p" color="inherit">
+                    Aplicação de consulta de CEPs
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <ProjectButton href="https://meucep.vercel.app/">
+                  Experimentar
                 </ProjectButton>
               </CardActions>
             </ProjectCard>
