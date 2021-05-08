@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
           property="og:description"
           content="Desenvolvedor FullStack descobrindo a tecnologia desde os 14 anos. Atualmente especializado em React e Node."
         />
-        <meta property="og:image" content="/samp.jpeg" />
+        <meta property="og:image" content="/presentation.png" />
         <meta property="og:site_name" content="Antonio Sampaio - Portfólio" />
 
         <meta property="twitter:card" content="summary_large_image" />
