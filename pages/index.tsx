@@ -85,7 +85,7 @@ export default function Home() {
             </Grid>
             <Grid item xs={12} md={6}>
               <SectionTitle>Sobre mim</SectionTitle>
-              <li>18 anos</li>
+              <li>19 anos</li>
               <li>Morando em Teresina-PI</li>
               <p>
                 Descobrindo a tecnologia desde os 14, fui introduzido ao
