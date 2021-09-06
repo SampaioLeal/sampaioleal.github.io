@@ -26,7 +26,7 @@ export const MainGreetings = styled.div`
 `;
 
 export const AboutSection = styled.section`
-  background-color: #445968;
+  background-color: #1e3b46;
   padding: 2rem;
   color: white;
 

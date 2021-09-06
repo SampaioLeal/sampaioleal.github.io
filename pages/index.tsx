@@ -62,12 +62,11 @@ export default function Home() {
               />
             </p>
           </MainGreetings>
-
           <Image
-            src="/main-presentation.svg"
-            alt="Desenvolvedor programando"
-            width={500}
-            height={500}
+            src="/samp.jpeg"
+            alt="Programador lindo"
+            width={250}
+            height={250}
           />
         </MainContent>
       </Container>
@@ -77,10 +76,10 @@ export default function Home() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={6}>
               <Image
-                src="/samp.jpeg"
-                alt="Programador lindo"
-                width={380}
-                height={380}
+                src="/main-presentation.svg"
+                alt="Desenvolvedor programando"
+                width={500}
+                height={500}
               />
             </Grid>
             <Grid item xs={12} md={6}>
