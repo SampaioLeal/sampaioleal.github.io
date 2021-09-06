@@ -1,10 +1,11 @@
 import "../styles/globals.css";
-import { StylesProvider } from "@material-ui/core/styles";
+import { StylesProvider, ThemeProvider } from "@material-ui/core/styles";
 import Head from "next/head";
+import theme from "../styles/theme";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <StylesProvider injectFirst>
+    <ThemeProvider theme={theme}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -19,7 +20,7 @@ function MyApp({ Component, pageProps }) {
 
         <title>Antonio Sampaio - Portfólio</title>
         <meta name="author" content="Antonio Sampaio Leal Neto" />
-        <meta http-equiv="content-language" content="pt-br" />
+        <meta httpEquiv="content-language" content="pt-br" />
         <meta
           name="keywords"
           content="antonio, sampaio, leal, desenvolvedor, fullstack, desenvolvimento, sampaioleal"
@@ -52,7 +53,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Component {...pageProps} />
-    </StylesProvider>
+    </ThemeProvider>
   );
 }
 
