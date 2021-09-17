@@ -19,6 +19,14 @@ import { GitHub, Instagram, LinkedIn } from "@mui/icons-material";
 
 const projects = [
   {
+    title: "MuiOS 11",
+    image: "/muios.png",
+    description:
+      "Sistema web baseado no Windows 11 capaz de agregar maior valor na experiência dos usuários",
+    link: "https://muios11.vercel.app/",
+    buttonLabel: "Experimentar",
+  },
+  {
     title: "TODO List",
     image: "/todo.png",
     description:
