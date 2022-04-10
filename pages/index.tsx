@@ -205,7 +205,7 @@ export default function Home() {
                 <Button
                   variant="contained"
                   startIcon={<Instagram />}
-                  href="https://github.com/SampaioLeal"
+                  href="https://www.instagram.com/samp4.io"
                 >
                   Instagram
                 </Button>
